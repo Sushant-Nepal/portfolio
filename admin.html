@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Gallery Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Admin Panel</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Site</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="admin-panel">
+        <div class="container">
+            <h2>Portfolio Management</h2>
+            
+            <div class="admin-section">
+                <h3>Update Profile Photo</h3>
+                <form id="updateProfileForm" class="admin-form">
+                    <div class="form-group">
+                        <label>Current Profile Photo</label>
+                        <div id="currentProfilePreview" class="profile-preview"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="profilePhoto">Select New Profile Photo</label>
+                        <input type="file" id="profilePhoto" accept="image/*">
+                        <div id="profilePhotoPreview" class="image-preview"></div>
+                    </div>
+                    <button type="submit" class="btn">Update Profile Photo</button>
+                </form>
+            </div>
+            
+            <div class="admin-section">
+                <h3>Add New Image</h3>
+                <form id="addImageForm" class="admin-form">
+                    <div class="form-group">
+                        <label for="imageFile">Select Image from Device</label>
+                        <input type="file" id="imageFile" name="imageFile" accept="image/*" required>
+                        <div id="imagePreview" class="image-preview"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="imageTitle">Image Title</label>
+                        <input type="text" id="imageTitle" name="imageTitle" placeholder="Teaching Python OOP" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imageDescription">Description</label>
+                        <textarea id="imageDescription" name="imageDescription" rows="3" placeholder="Brief description of the image"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Add Image</button>
+                </form>
+            </div>
+
+            <div class="admin-section">
+                <h3>Current Gallery Images</h3>
+                <div id="adminGalleryList" class="admin-gallery-list">
+                    <!-- Images will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Sushant Nepal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>
